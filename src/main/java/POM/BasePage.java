@@ -53,5 +53,18 @@ public class BasePage {
         @FindBy (id = "tinymce")
         public WebElement TextIframe;
 
+        @FindBy (xpath = "//button[@onclick='jsAlert()']")
+        public WebElement Alerts;
+
+
+        @FindBy (xpath = "//button[@onclick='jsConfirm()']")
+        public WebElement AlertsConfirm;
+
+        @FindBy (xpath = "//button[@onclick='jsPrompt()']")
+        public WebElement AlertsPrompt;
+
+
+
+
 }
 

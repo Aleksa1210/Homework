@@ -31,7 +31,7 @@ public class Login_Success extends TestBase {
     System.out.println(basePage.LoggedMsg.getText());
     Assert.assertEquals(basePage.LoggedMsg.getText(),"You logged into a secure area!\n" + "×");
 
-    //TODO - close browser
+
 }
 
 @Test()
@@ -65,7 +65,7 @@ public class Login_Success extends TestBase {
         actions.contextClick(basePage.ContextMenu).perform();
 
 
-       // TODO with JS. assert
+
     }
 
     @Test
@@ -76,6 +76,8 @@ public class Login_Success extends TestBase {
         actions.dragAndDrop(basePage.DragAndDropB, basePage.DragAndDropA).perform();
       //  actions.clickAndHold(basePage.DragAndDropA).moveToElement(basePage.DragAndDropB).perform();
       //actions.dragAndDropBy(basePage.DragAndDropA,110, 125).build().perform();
+
+
 
     }
 
@@ -95,14 +97,33 @@ public class Login_Success extends TestBase {
     @Test
     public void iframe(){
         Driver.getDriver().get(ConfigurationReader.getProperty("Iframe"));
-
         driver.switchTo().frame(driver.findElement(By.className("no-js")));
         basePage.TextIframe.sendKeys("hello" + Keys.ENTER);
+      //  driver.switchTo().parentFrame();
+    }
 
 
 
+    @Test
+    public void alerts(){
+//       Driver.getDriver().get(ConfigurationReader.getProperty("Alert"));
+//        basePage.Alerts.click();
+//        Alert alert = driver.switchTo().alert();
+//        alert.accept();
+
+//        basePage.AlertsConfirm.click();
+//        Alert alert = driver.switchTo().alert();
+//        alert.dismiss();
+//
+//
+//        basePage.AlertsPrompt.click();
+//        alert.sendKeys("okay");
 
     }
+
+
+
+
 
 
 }
